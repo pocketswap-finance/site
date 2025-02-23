@@ -1,0 +1,219 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PocketSwap</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="pocket.ico">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <div style="margin-top: 4px; margin-left: 5px;"><span style="font-size: 25px; font-weight: bolder; font-family: 'Chakra Petch', serif;">PocketSwap</span></div>
+      </li>
+
+      <li id="aboutusbutton">
+        <button onclick="window.location='/about'"><span style="font-family: 'Jersey 10', serif; letter-spacing: 3px;">About Us</span></button>
+      </li>
+    </ul>
+  </nav>
+  <div>
+    <img id="movables1" src="ethereum.png" alt="" width="145px">
+    <img id="movables2" src="aave.png" alt="" width="145px">
+    <img id="movables3" src="tether.png" alt="" width="145px">
+    <img id="movables4" src="ripple.png" alt="" width="245px">
+    <svg viewBox="0 0 100 100" width="50px" style="margin-left: 38.4%; margin-top: -0.1%; position: absolute;">
+      <path d="M25,2 L2,2 L2,25" fill="none" stroke="rgba(255, 255, 255, 0.5)" stroke-width="3" />
+    </svg>
+    <svg viewBox="0 0 100 100" width="50px" style="margin-left: 59%; margin-top: -0.1%; position: absolute;">
+      <path d="M98,25 L98,2 L75,2" fill="none" stroke="rgba(255, 255, 255, 0.5)" stroke-width="3" />
+    </svg>
+    
+    <path d="" fill="none" stroke="black" stroke-width="3" />
+    <path d="" fill="none" stroke="black" stroke-width="3" />
+    <div id="swapdiv" style="margin-left: 38.5%; margin-top: 100px;">
+      <div>
+        <h1 style="font-family: 'Sixtyfour', serif; letter-spacing: 3px; font-size: 32px; font-weight: 200; margin-left: 85px;">Swap</h1>
+        <h3 style="text-align: center; font-family: 'Jersey 10', serif; letter-spacing: 3px; font-size: 20px; font-weight: 200; color: rgba(255, 255, 255, 0.4);">Exchange tokens with low fees</h3>
+      </div>
+      <div style="width: 90%; padding-top: 14px;">
+        <span id="information">You send</span>
+        <div id="tokendiv">
+          <input inputmode="decimal" autocomplete="off" autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0" minlength="1" maxlength="79" spellcheck="false" value="">
+          <div id="picker">
+            <div>
+              <img src="flatethereum.png" alt="" width="25px">
+            </div>
+            <div style="padding-top: 7px;">
+              <span style="font-family: 'Jersey 10', serif; letter-spacing: 3px; font-size: 12px; padding: 5px; font-weight: bold;">ETH</span>
+            </div>
+            <div style="padding-top: 9px;">
+              <svg width="11.5" height="6" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-nZgfj ttvQB"><path d="M0.97168 1L6.20532 6L11.439 1" stroke="#FFFFFF"></path></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 90%; padding-top: 32px;">
+        <span id="information">You recieve</span>
+        <div id="tokendiv">
+          <input inputmode="decimal" autocomplete="off" autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0" minlength="1" maxlength="79" spellcheck="false" value="">
+          <div id="picker">
+            <div>
+              <img src="tetherflat.png" alt="" width="25px">
+            </div>
+            <div style="padding-top: 7px;">
+              <span style="font-family: 'Jersey 10', serif; letter-spacing: 3px; font-size: 12px; padding: 5px; font-weight: bold;">USDT</span>
+            </div>
+            <div style="padding-top: 9px;">
+              <svg width="11.5" height="6" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-nZgfj ttvQB"><path d="M0.97168 1L6.20532 6L11.439 1" stroke="#FFFFFF"></path></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 90%; padding-top: 18px;">
+        <span style="font-family: 'Jersey 10', serif; letter-spacing: 3px; color: rgba(255, 255, 255, 0.4); font-size: 18px;">Rate</span> <span style="font-family: 'Jersey 10', serif; letter-spacing: 3px; font-size: 18px; margin-left: 41.7%;">1 ETH = 3,710.43 USDT</span>
+        <span style="font-family: 'Jersey 10', serif; letter-spacing: 3px; color: rgba(255, 255, 255, 0.4); font-size: 18px;">Price Impact</span> <span style="font-family: 'Jersey 10', serif; letter-spacing: 3px; font-size: 18px; margin-left: 63.5%;">0%</span>
+      </div>
+      <div style="width: 90%; padding-top: 76px; margin: 0;">
+
+        <button id="exchange" style="margin-top: -68px;">
+          Exchange
+        </button>
+
+        
+      </div>
+    </div>
+    <svg viewBox="0 0 100 100" width="50px" style="margin-left: 38.4%; margin-top: -2.5%; position: absolute;">
+      <path d="M2,75 L2,98 L25,98" fill="none" stroke="rgba(255, 255, 255, 0.5)" stroke-width="3" />
+    </svg>
+    <svg viewBox="0 0 100 100" width="50px" style="margin-left: 59.1%; margin-top: -3.2%;">
+      <path d="M75,98 L98,98 L98,75" fill="none" stroke="rgba(255, 255, 255, 0.5)" stroke-width="3"></path>
+    </svg>
+    <div><p style="letter-spacing: 3px; color: rgba(255, 255, 255, 0.4); margin-left: 39%; margin-top: 25px; font-family: 'Chakra Petch', serif;">NOTE: PocketSwap is under development, <br>some features might not be usable.</p></div>
+    <div id="description">
+      <div id="line"></div>
+      <div style="color: white; margin-top: 100px; font-family: 'Sixtyfour', serif; font-size: 40px; margin-left: -220px;">
+        Swapping made <span class="word wisteria"> simple.</span><span class="word belize"> easy.</span><span class="word pomegranate"> cheap.</span>
+      </div>
+      <div id="cards">
+          <div>
+            <h1>Word from our developers</h1>
+            <p>We work tirelessly to give you the best experience, <br>
+              we pride ourselves with our swap's security, low fees <br>
+              and our <span style="color: rgb(104, 65, 109);">community</span>.</p>
+          </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 15px; color: white; padding-left: 15px;">© 2025 - PocketSwap</p>
+    </div>
+    <script>
+      // Make the DIV element draggable:
+      dragElement(document.getElementById("movables1"));
+      dragElement(document.getElementById("movables2"));
+      dragElement(document.getElementById("movables3"));
+      dragElement(document.getElementById("movables4"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+var words = document.getElementsByClassName('word');
+var wordArray = [];
+var currentWord = 0;
+
+words[currentWord].style.opacity = 1;
+for (var i = 0; i < words.length; i++) {
+  splitLetters(words[i]);
+}
+
+function changeWord() {
+  var cw = wordArray[currentWord];
+  var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+  for (var i = 0; i < cw.length; i++) {
+    animateLetterOut(cw, i);
+  }
+  
+  for (var i = 0; i < nw.length; i++) {
+    nw[i].className = 'letter behind';
+    nw[0].parentElement.style.opacity = 1;
+    animateLetterIn(nw, i);
+  }
+  
+  currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+}
+
+function animateLetterOut(cw, i) {
+  setTimeout(function() {
+		cw[i].className = 'letter out';
+  }, i*80);
+}
+
+function animateLetterIn(nw, i) {
+  setTimeout(function() {
+		nw[i].className = 'letter in';
+  }, 340+(i*80));
+}
+
+function splitLetters(word) {
+  var content = word.innerHTML;
+  word.innerHTML = '';
+  var letters = [];
+  for (var i = 0; i < content.length; i++) {
+    var letter = document.createElement('span');
+    letter.className = 'letter';
+    letter.innerHTML = content.charAt(i);
+    word.appendChild(letter);
+    letters.push(letter);
+  }
+  
+  wordArray.push(letters);
+}
+
+changeWord();
+setInterval(changeWord, 4000);
+
+
+    </script>
+  </div>
+</body>
+</html>
